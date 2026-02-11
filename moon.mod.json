@@ -1,14 +1,14 @@
 {
   "name": "mizchi/lib",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "deps": {
-    "moonbitlang/async": "0.16.2"
+    "moonbitlang/async": "0.16.6"
   },
-  "source": "src",
-  "preferred-target": "js",
   "readme": "README.mbt.md",
   "repository": "",
   "license": "Apache-2.0",
   "keywords": [],
-  "description": ""
+  "description": "",
+  "source": "src",
+  "preferred-target": "js"
 }
