@@ -76,6 +76,21 @@ my-project/
 - Pre-commit hooks via [prek](https://github.com/j178/prek) (optional [starlint](https://github.com/mizchi/starlint))
 - Claude Code / GitHub Copilot support (AGENTS.md)
 
+## CLI Tool Template
+
+To build a CLI tool, use the [`feat/cli`](https://github.com/mizchi/moonbit-template/tree/feat/cli) branch:
+
+```bash
+git clone -b feat/cli https://github.com/mizchi/moonbit-template my-cli
+```
+
+The `feat/cli` branch includes:
+
+- `src/cmd/app/` - CLI executable (`is-main: true`, native target)
+- `install.sh` - curl-based installer script
+- `.github/workflows/release.yml` - Builds and releases linux-x64 / macos-arm64 binaries
+- Two install methods: `moon install` and `curl | sh`
+
 ## Release Checklist
 
 Before tagging a release:
