@@ -36,3 +36,8 @@ clean:
 
 # Pre-release check
 release-check: fmt info check test
+
+# Pre-release check on all supported targets
+release-check-all:
+    just release-check
+    just target=native check test

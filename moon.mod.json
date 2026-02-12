@@ -5,10 +5,10 @@
     "moonbitlang/async": "0.16.6"
   },
   "readme": "README.mbt.md",
-  "repository": "",
+  "repository": "https://github.com/mizchi/moonbit-template",
   "license": "Apache-2.0",
-  "keywords": [],
-  "description": "",
+  "keywords": ["moonbit", "template", "workflow"],
+  "description": "MoonBit project template with CI, docs, and release workflow defaults.",
   "source": "src",
   "preferred-target": "js"
 }

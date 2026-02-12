@@ -30,6 +30,7 @@ just test      # run tests
 just test-update  # update snapshot tests
 just run       # run main
 just info      # generate type definition files
+just release-check-all  # release check on js + native
 ```
 
 ## Project Structure
@@ -59,6 +60,16 @@ my-project/
 - Benchmarks with `moon bench`
 - GitHub Actions CI
 - Claude Code / GitHub Copilot support (AGENTS.md)
+
+## Release Checklist
+
+Before tagging a release:
+
+1. Update `moon.mod.json` version and metadata (`repository`, `keywords`, `description`)
+2. Update `CHANGELOG.md`
+3. Run `just release-check-all`
+4. Create annotated tag (for example: `git tag -a v0.2.0 -m "Release v0.2.0"`)
+5. Push branch and tag
 
 ## License
 
