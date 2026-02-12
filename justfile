@@ -3,6 +3,9 @@
 # Default target (js for browser compatibility)
 target := "js"
 
+# CLI binary name
+bin := "app"
+
 # Default task: check and test
 default: check test
 
@@ -22,9 +25,17 @@ test:
 test-update:
     moon test --update --target {{target}}
 
-# Run main
-run:
-    moon run src/main --target {{target}}
+# Run CLI (native)
+run *args:
+    moon run src/cmd/{{bin}} --target native -- {{args}}
+
+# Build CLI binary (native release)
+build:
+    moon build --release --target native src/cmd/{{bin}}
+
+# Install CLI to ~/.moon/bin
+install:
+    moon install ./src/cmd/{{bin}}
 
 # Generate type definition files
 info:

@@ -2,12 +2,17 @@
   "name": "mizchi/lib",
   "version": "0.1.2",
   "deps": {
-    "moonbitlang/async": "0.16.6"
+    "moonbitlang/async": "0.16.6",
+    "moonbitlang/x": "0.4.40"
   },
   "readme": "README.mbt.md",
   "repository": "https://github.com/mizchi/moonbit-template",
   "license": "Apache-2.0",
-  "keywords": ["moonbit", "template", "workflow"],
+  "keywords": [
+    "moonbit",
+    "template",
+    "workflow"
+  ],
   "description": "MoonBit project template with CI, docs, and release workflow defaults.",
   "source": "src",
   "preferred-target": "js"

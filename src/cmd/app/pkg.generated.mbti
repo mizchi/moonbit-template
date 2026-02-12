@@ -1,5 +1,5 @@
 // Generated using `moon info`, DON'T EDIT IT
-package "mizchi/lib/main"
+package "mizchi/lib/cmd/app"
 
 // Values
 

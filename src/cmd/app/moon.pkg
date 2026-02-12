@@ -1,6 +1,7 @@
 import {
   "mizchi/lib" @lib,
-  "moonbitlang/async",
+  "moonbitlang/core/strconv",
+  "moonbitlang/x/sys",
 }
 
 options(

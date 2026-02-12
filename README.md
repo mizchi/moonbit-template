@@ -1,6 +1,6 @@
 # MoonBit Template
 
-A minimal MoonBit project template with CI, justfile, and AI coding assistant support.
+A minimal MoonBit project template with CLI distribution, CI, and AI coding assistant support.
 
 ## Usage
 
@@ -42,8 +42,9 @@ just fmt       # format code
 just check     # type check
 just test      # run tests
 just test-update  # update snapshot tests
-just run       # run main
-just info      # generate type definition files
+just run 20    # run CLI with args
+just build     # build native release binary
+just install   # install CLI to ~/.moon/bin
 just release-check-all  # release check on js + native
 ```
 
@@ -53,26 +54,57 @@ just release-check-all  # release check on js + native
 my-project/
 ├── moon.mod.json      # Module configuration
 ├── src/
-│   ├── moon.pkg       # Package configuration
+│   ├── moon.pkg       # Library package
 │   ├── lib.mbt        # Library code
 │   ├── lib_test.mbt   # Tests
 │   ├── lib_bench.mbt  # Benchmarks
 │   ├── API.mbt.md     # Doc tests
-│   └── main/
-│       ├── moon.pkg
-│       └── main.mbt   # Entry point
+│   └── cmd/
+│       └── app/       # CLI executable
+│           ├── moon.pkg   # is-main: true
+│           └── main.mbt
 ├── justfile           # Task runner
+├── install.sh         # curl-based installer
 └── .github/workflows/
-    └── ci.yml         # GitHub Actions CI
+    ├── ci.yml         # CI (check + test)
+    └── release.yml    # Build & release binaries
 ```
+
+## CLI Distribution
+
+### Install via moon (from mooncakes registry)
+
+```bash
+moon install your-username/your-project/cmd/app
+```
+
+### Install via curl (from GitHub Releases)
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/your-username/your-project/main/install.sh | sh
+```
+
+### Release workflow
+
+Tag a version to trigger the release:
+
+```bash
+git tag -a v0.1.0 -m "Release v0.1.0"
+git push origin v0.1.0
+```
+
+This builds `linux-x64` and `macos-arm64` binaries and publishes them as GitHub Release assets.
 
 ## Features
 
 - `src/` directory structure with `moon.pkg` format
+- CLI executable with `cmd/app/` pattern (`is-main: true`)
+- Native binary release for linux-x64 and macos-arm64
+- `install.sh` for curl-based installation
 - Snapshot testing with `inspect()`
 - Doc tests in `.mbt.md` files
 - Benchmarks with `moon bench`
-- GitHub Actions CI
+- GitHub Actions CI + Release workflow
 - Pre-commit hooks via [prek](https://github.com/j178/prek) (optional [starlint](https://github.com/mizchi/starlint))
 - Claude Code / GitHub Copilot support (AGENTS.md)
 
@@ -95,10 +127,10 @@ The `feat/cli` branch includes:
 
 Before tagging a release:
 
-1. Update `moon.mod.json` version and metadata (`repository`, `keywords`, `description`)
+1. Update version in `moon.mod.json` and `src/cmd/app/main.mbt`
 2. Update `CHANGELOG.md`
 3. Run `just release-check-all`
-4. Create annotated tag (for example: `git tag -a v0.2.0 -m "Release v0.2.0"`)
+4. Create annotated tag: `git tag -a v0.2.0 -m "Release v0.2.0"`
 5. Push branch and tag
 
 ## License
