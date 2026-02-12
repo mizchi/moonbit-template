@@ -20,6 +20,20 @@ Update `moon.mod.json` with your module name:
 }
 ```
 
+### Post-install
+
+Set up pre-commit hooks with [prek](https://github.com/j178/prek):
+
+```bash
+prek install
+```
+
+Optional: install [starlint](https://github.com/mizchi/starlint) for MoonBit linting, then uncomment the `starlint` hook in `.pre-commit-config.yaml`:
+
+```bash
+moon install mizchi/starlint/cmd/starlint
+```
+
 ## Quick Commands
 
 ```bash
@@ -59,6 +73,7 @@ my-project/
 - Doc tests in `.mbt.md` files
 - Benchmarks with `moon bench`
 - GitHub Actions CI
+- Pre-commit hooks via [prek](https://github.com/j178/prek) (optional [starlint](https://github.com/mizchi/starlint))
 - Claude Code / GitHub Copilot support (AGENTS.md)
 
 ## Release Checklist
