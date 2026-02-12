@@ -3,5 +3,6 @@ _build/
 target/
 target
 .mooncakes/
+.repos/
 .moonagent/
 .jj/
