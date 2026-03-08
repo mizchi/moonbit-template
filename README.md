@@ -39,11 +39,14 @@ moon install mizchi/starlint/cmd/starlint
 ```bash
 just           # check + test
 just fmt       # format code
+just fmt-check # verify formatting
 just check     # type check
 just test      # run tests
 just test-update  # update snapshot tests
 just run       # run main
 just info      # generate type definition files
+just ci        # local CI equivalent for default target
+just ci-all    # lint + js/native test matrix
 just release-check-all  # release check on js + native
 ```
 
@@ -57,7 +60,8 @@ my-project/
 │   ├── lib.mbt        # Library code
 │   ├── lib_test.mbt   # Tests
 │   ├── lib_bench.mbt  # Benchmarks
-│   ├── API.mbt.md     # Doc tests
+│   ├── README.mbt.md  # Package README + doc tests
+│   ├── quickcheck_test.mbt # Property tests
 │   └── main/
 │       ├── moon.pkg
 │       └── main.mbt   # Entry point
@@ -71,10 +75,16 @@ my-project/
 - `src/` directory structure with `moon.pkg` format
 - Snapshot testing with `inspect()`
 - Doc tests in `.mbt.md` files
+- Property-based tests with `moonbitlang/quickcheck`
 - Benchmarks with `moon bench`
-- GitHub Actions CI
+- GitHub Actions CI with format and `.mbti` verification
 - Pre-commit hooks via [prek](https://github.com/j178/prek) (optional [starlint](https://github.com/mizchi/starlint))
 - Claude Code / GitHub Copilot support (AGENTS.md)
+
+## Recommended Reading
+
+- Latest MoonBit update as of 2026-03-08: [MoonBit 0.8.0 Released (2026-02-09)](https://www.moonbitlang.com/updates/moonbit-0-8-0-release)
+- Property testing reference: [moonbitlang/quickcheck](https://github.com/moonbitlang/quickcheck)
 
 ## CLI Tool Template
 
