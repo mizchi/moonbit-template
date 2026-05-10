@@ -1,0 +1,20 @@
+name: moonbit-template
+version: 0.1.0
+description: APM dependencies for the moonbit-template repo. Selected via skill-selector Phase 1 against this repo's signals (MoonBit + JS backend + justfile + GitHub Actions).
+author: mizchi
+dependencies:
+  apm:
+    # MoonBit core skills (active-in-language heuristic + first-time setup)
+    - moonbitlang/moonbit-agent-guide/moonbit-agent-guide
+    - mizchi/skills/moonbit-practice
+    - mizchi/skills/moonbit-js-binding   # target=js in justfile
+
+    # CLAUDE.md mandates
+    - mizchi/skills/justfile             # task runner
+    - mizchi/skills/ast-grep-practice    # lint
+
+    # Process / meta (peer of skill-selector + the selector itself)
+    - mizchi/skills/apm-usage
+    - mizchi/skills/skill-selector
+  mcp: []
+scripts: {}

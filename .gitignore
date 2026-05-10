@@ -5,3 +5,10 @@ target
 .mooncakes/
 .repos/
 .moonagent/
+
+# APM dependencies and deploy targets (regenerable via `apm install`)
+apm_modules/
+.claude/skills/
+.agents/skills/
+# Project-specific skills can still be tracked by force-add:
+#   git add -f .claude/skills/<my-skill>/

@@ -1,0 +1,74 @@
+lockfile_version: '1'
+generated_at: '2026-05-10T07:52:07.791458+00:00'
+apm_version: 0.12.4
+dependencies:
+- repo_url: mizchi/skills
+  host: github.com
+  resolved_commit: 5897e7e19016a8cd6917925ac7ad84fa3feb8778
+  virtual_path: apm-usage
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/apm-usage
+  - .claude/skills/apm-usage
+  content_hash: sha256:abb6cc4892713ed3d3976d05b5445566cfe22fa54f8d7db225bc6de3b9331976
+- repo_url: mizchi/skills
+  host: github.com
+  resolved_commit: 5897e7e19016a8cd6917925ac7ad84fa3feb8778
+  virtual_path: ast-grep-practice
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/ast-grep-practice
+  - .claude/skills/ast-grep-practice
+  content_hash: sha256:5b3281c9b87bf483168c78d788be0f820d21dae0054f32fbd16f3905ce436df5
+- repo_url: mizchi/skills
+  host: github.com
+  resolved_commit: 5897e7e19016a8cd6917925ac7ad84fa3feb8778
+  virtual_path: justfile
+  is_virtual: true
+  package_type: marketplace_plugin
+  deployed_files:
+  - .agents/skills/justfile
+  - .claude/skills/justfile
+  content_hash: sha256:184797176b2287348d8d438d184f94c36de38b51885836c47e2e053769fddbf2
+- repo_url: mizchi/skills
+  host: github.com
+  resolved_commit: 5897e7e19016a8cd6917925ac7ad84fa3feb8778
+  virtual_path: moonbit-js-binding
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/moonbit-js-binding
+  - .claude/skills/moonbit-js-binding
+  content_hash: sha256:620878e9b240fb73e988c70b41851093391bcfd81afe8d5c324a1e30e3fa30f0
+- repo_url: mizchi/skills
+  host: github.com
+  resolved_commit: 5897e7e19016a8cd6917925ac7ad84fa3feb8778
+  virtual_path: moonbit-practice
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/moonbit-practice
+  - .claude/skills/moonbit-practice
+  content_hash: sha256:aaa7bfce94c3cb1bff9c2199423f26c345b99eb281ffb109574187725b0ea317
+- repo_url: mizchi/skills
+  host: github.com
+  resolved_commit: 5897e7e19016a8cd6917925ac7ad84fa3feb8778
+  virtual_path: skill-selector
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/skill-selector
+  - .claude/skills/skill-selector
+  content_hash: sha256:70e707bbaee82a0ef4de353eb5710a1f11eb273fc100bae13f6136992334538f
+- repo_url: moonbitlang/moonbit-agent-guide
+  host: github.com
+  resolved_commit: a5c40accf4bacbcae3300fbb8b60d8d01e31d611
+  virtual_path: moonbit-agent-guide
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/moonbit-agent-guide
+  - .claude/skills/moonbit-agent-guide
+  content_hash: sha256:b8aa5afbbf7abfcd35c14fea97e8255f96d15b67a5b3b19d8508d1dac2bb7b6a
